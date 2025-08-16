@@ -1,0 +1,56 @@
+<!doctype html>
+<html>
+  <head>
+    <title>GradeBac</title>
+    <style type="text/css">
+      body { margin: 10px; white-space: nowrap; }
+      h1 { font-size: 15px; }
+      #container { align-items: center; display: flex; justify-content: space-between; }
+      .header { padding: 10px; background-color: rgb(0, 0, 0); margin: 0px; }
+      .nav { display: flex; }
+      .left { flex: 0 0 50%; text-align: center; margin-top: 0; background: rgb(189,189,189); border: solid 2px grey;}
+      .right { flex: 1; text-align: center; margin-top: 0; border: solid 2px grey;}
+      #save { background-color: rgb(204, 204, 204); }
+    </style>
+  </head>
+  <body>
+    <div class="header"><h1 style="color: white">GradeBac</h1></div>
+    <div class="nav">
+      <div id="info" class="left"><span>Info</span></div>
+      <div id="settings" class="right"><span>Settings</span></div>
+    </div>
+    <div id="container">
+      <div id="itab">
+        <h4>How it works:</h4>
+        <ul>
+          <li><p>Open any of your classes and Click "Assignments"</p></li>
+          <li><p>You will see <b>Final Grade</b> at the top automatically.</p></li>
+          <li><p>The calculator runs silently in the background.</p></li>
+          <br>
+          <li><p>Feedback: discord.gg/</p></li>
+          <li><a href="https://github.com/tudprc/gradebac">Github</a></li>
+        </ul>
+      </div>
+      <div id="stab" style="display:none;">
+        <h4>Settings:</h4>
+        <ul> 
+          <li><p>Check off finished assignments(Coming soon): <input id="ac" type="checkbox"></p></li>
+          <li><p>Choose colors for classes(Coming soon): <input id="cc" type="checkbox"></p></li>
+          <li><p>Set importance to assignments(Coming soon): <input id="im" type="checkbox"></p></li>
+          <li><p>Add personal event button to Dashboard: <input id="pe" type="checkbox"></p></li>
+          <li><p>Grade calculation: <input id="gc" type="checkbox"></p></li>
+          <li>
+            <p>Select grade calculation algorithm:</p>
+            <select id="algorithmSelect">
+              <option value="pw">Percentage weights (default)</option>
+              <option value="pba">Percentage weights with Points Based Averaging</option>
+            </select>
+          </li>
+          <li><p>Show percentages instead of marks: <input id="pc" type="checkbox"></p></li>
+        </ul>
+        <button id="save">Save</button>
+      </div>
+    </div>
+    <script src="popup.js"></script>
+  </body>
+</html>

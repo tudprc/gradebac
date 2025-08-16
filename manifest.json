@@ -1,0 +1,49 @@
+{
+  "manifest_version": 3,
+  "name": "GradeBac - Managebac Grade Calculator",
+  "short_name": "GradeBac",
+  "version": "1.3",
+  "description": "GradeBac automatically calculates final grades using your marks and grade boundaries, giving you instant, accurate results without any hassle.",
+  "author": "Tudor Percec",
+  "default_locale": "en",
+  "icons": {
+    "16": "./resources/icon16.png",
+    "48": "./resources/icon48.png",
+    "128": "./resources/icon128.png"
+  },
+  "action": {
+    "default_popup": "popup.html"
+  },
+  "permissions": ["storage", "activeTab", "scripting"],
+  "host_permissions": [
+    "*://*.managebac.com/*",
+    "*://*.managebac.cn/*"
+  ],
+  "background": {
+    "service_worker": "background.js",
+    "type": "module"
+  },
+  "content_scripts": [
+    {
+      "matches": [
+        "*://*.managebac.com/student/*",
+        "*://*.managebac.com/student",
+        "*://*.managebac.cn/*"
+      ],
+      "js": [
+        "./resources/jquery-3.4.1.js",
+        "content.js",
+        "contentPoints.js",
+        "pickColor.js",
+        "student.js"
+      ],
+      "run_at": "document_idle"
+    }
+  ],
+  "web_accessible_resources": [
+    {
+      "resources": ["resources/*"],
+      "matches": ["<all_urls>"]
+    }
+  ]
+}

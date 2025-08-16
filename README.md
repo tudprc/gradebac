@@ -1,8 +1,8 @@
-# ManagebacGradeCalculator
+# GradeBac
 Chrome extension that instantly calculates your grade on managebac.com or managebac.cn!
 
 ## Installation
-1. Chrome Store: 
+1. Chrome Store: Coming Soon
 
 2. How to install:
 * Download the zip file from GitHub

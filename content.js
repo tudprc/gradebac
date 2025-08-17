@@ -5,7 +5,7 @@
   const WAIT_MS = 400;
   const MAX_TRIES = 60;
 
-  // ---- SPA navigation hooks ----
+  // SPA navigation hooks
   function onUrlChange(callback) {
     let last = location.href;
 
@@ -62,7 +62,7 @@
       let tries = 0;
       const interval = setInterval(() => {
         tries++;
-        const ready = jQuery('.highcharts-axis').length > 0
+        const ready = jQuery('.highcharts-axis').length > 0 
                    || jQuery('.sidebar-items-list').length > 0
                    || jQuery('.tasks-list-container').length > 0;
         if (!ready && tries < MAX_TRIES) return;

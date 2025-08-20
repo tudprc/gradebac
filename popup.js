@@ -49,7 +49,7 @@ document.getElementById("save").addEventListener('click', () => {
   });
 });
 
-// open links in a new tab
+// open links in new tab
 document.addEventListener('DOMContentLoaded', function () {
   var links = document.getElementsByTagName("a");
   for (var i = 0; i < links.length; i++) {

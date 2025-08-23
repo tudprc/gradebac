@@ -1,6 +1,6 @@
 {
    "extName": {
-      "description": "Managebac extension that automatically calculates grades.",
+      "description": "MB extension that calculates grades etc.",
       "message": "GradeBac"
    }
 }
